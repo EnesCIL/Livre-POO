@@ -48,9 +48,12 @@ class Auteur{
     // faire une fonction pour afficher la bibiliographie de l'auteur
 
     public function afficherBibliographie(){
+        echo $this->_nom.' '.$this->_prenom.' '.$this->_dateNaissance->format('d-m-Y')."<br>";
+        $result="";
         foreach ($this->_livres as $livre){
-            return $livre;
+            $result .= $livre."<br>";
         }
+        return $result;
     }
 }
 ?>
